@@ -675,7 +675,7 @@ the specific language governing permissions and limitations under the Apache Lic
               
             // cache the body so future lookups are cheap
 	    this.body = thunk(function() { 
-			if(opts.dropdownContainer.length){
+			if(opts.dropdownContainer && opts.dropdownContainer.length){
 					return opts.dropdownContainer;
 			}
 		return  opts.element.closest("body"); });
